@@ -123,3 +123,10 @@ STATIC_URL = '/static/'
 
 #ASGI application for channels
 ASGI_APPLICATION = "core.routing.application"
+
+#channels backend
+CHANNEL_LAYERS = {
+    "default":{
+        "BACKEND":"channels.layers.InMemoryChannelLayer"
+    }
+}
